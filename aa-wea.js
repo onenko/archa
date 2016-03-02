@@ -17,8 +17,8 @@ aa.wea = {
   WEA_NOD: 0x0800
 };
 
-aa.items.ItemWName1.props = { thProp: 'thProp1', thGrade: AA_ITEM_BASIC, thVal1: 54, thLink: './th/reports/1455_DATA_LOAD_231054944/1455_DATA_LOAD_231054944-PIN-PRODUCT.PR_XREF.csv.gz' }
-aa.items.ItemWName2.props = { thProp: 'thProp2', thGrade: AA_ITEM_GREAT, thVal1: 2, thLink: './th/reports/1455_DATA_LOAD_231054944/1456_DATA_LOAD_231054944-PIN-PRODUCT.PR_XREF.csv.gz' }
-aa.items.ItemWName3.props = { thProp: 'thProp3', thGrade: AA_ITEM_BASIC, thVal2: 54, thVal3: 54, thVal4: 54, thVal5: 54, thVal6: 54, thVal7: 54, thVal8: 54 }
-aa.items.ItemWName4.props = { thProp: 'thProp4', thGrade: AA_ITEM_BASIC, thVal1: 177, thVal9: 4 }
+aa.items.ItemWName1.props = { thProp: 'thProp1', thGrade: aa.GRADE_BAS | aa.EQUIP_CRF | aa.WEA_BOW, thVal1: 54, thLink: './th/reports/1455_DATA_LOAD_231054944/1455_DATA_LOAD_231054944-PIN-PRODUCT.PR_XREF.csv.gz' }
+aa.items.ItemWName2.props = { thProp: 'thProp2', thGrade: aa.GRADE_GRN | aa.EQUIP_CRF | aa.WEA_BOW, thVal1: 2, thLink: './th/reports/1455_DATA_LOAD_231054944/1456_DATA_LOAD_231054944-PIN-PRODUCT.PR_XREF.csv.gz' }
+aa.items.ItemWName3.props = { thProp: 'thProp3', thGrade: aa.GRADE_BAS | aa.EQUIP_OBS | aa.WEA_BOW, thVal2: 54, thVal3: 54, thVal4: 54, thVal5: 54, thVal6: 54, thVal7: 54, thVal8: 54 }
+aa.items.ItemWName4.props = { thProp: 'thProp4', thGrade: aa.GRADE_BAS | aa.EQUIP_CRF | aa.WEA_STF, thVal1: 177, thVal9: 4 }
 
