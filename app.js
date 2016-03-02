@@ -33,7 +33,7 @@ app.controller('MainCtrl', ['$scope', '$http', 'uiGridConstants', function ($sco
       return { height: ($scope.gridOptions1.data.length * rowHeight + headerHeight) + "px" };
   };
 
-  $scope.myData = aa.items.;
+  $scope.myData = aa.items.getArrayOf(0);
  
 /* $http.get('/data/101.json')
     .success(function(data) {
