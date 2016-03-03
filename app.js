@@ -1,16 +1,24 @@
 var app = angular.module('app', ['ngAnimate', 'ngTouch', 'ui.grid']);
  
+
+app.filter('lvlRange', function() {
+      return function(props) {
+          return props.lvlMin + '-' + props.lvlMax;
+      };
+});
+
 app.controller('MainCtrl', ['$scope', '$http', 'uiGridConstants', function ($scope, $http, uiGridConstants) {
   $scope.gridOptions1 = {
     enableSorting: true,
     enableColumnMenus: false,
 
     columnDefs: [
-      { field: 'thName', name: "Name", maxWidth: 200 },
-      { field: 'thProp', name: "Prop", maxWidth: 50 },
-      { field: 'thGrade', name: "Grade", maxWidth: 60 },
-      { field: 'thVal1', name: "Val", maxWidth: 30 },
-      { field: 'thLink', name: "Link", enableSorting: false }
+      { field: 'name', name: 'Name', maxWidth: 200 },
+      { field: 'props.thProp', name: 'Prop', maxWidth: 50 },
+      { field: 'props.thGrade', name: 'Grade', maxWidth: 60 },
+      { field: 'props', name: 'Lvls', cellFilter: 'lvlRange', maxWidth: 50 },
+      { field: 'props.thVal1', name: 'Val1', maxWidth: 30 },
+      { field: 'props.thLink', name: 'Link', enableSorting: false }
     ],
     onRegisterApi: function( gridApi ) {
       $scope.grid1Api = gridApi;
@@ -43,3 +51,4 @@ app.controller('MainCtrl', ['$scope', '$http', 'uiGridConstants', function ($sco
   $scope.gridOptions1.data = $scope.myData;
     
 }]);
+
